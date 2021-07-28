@@ -1,0 +1,183 @@
+.jqzoom {
+    width: 390px;
+    height: 390px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.jqzoom img {
+    max-width: 100%;
+    max-height: 100%
+}
+.zoomdiv {
+    z-index: 200;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background: #fff;
+    border: 1px solid #ddd;
+    display: none;
+    overflow: hidden
+}
+
+.zoomdiv .bigimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: unset;
+    max-height: unset
+}
+
+.jqZoomPup {
+    z-index: 10;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    opacity: .5;
+    -moz-opacity: .5;
+    -khtml-opacity: .5;
+    cursor: crosshair;
+    filter: alpha(Opacity=50)
+}
+
+.jqZoomPup img {
+    min-width: 390px
+}
+
+.spec-preview {
+    width: 392px;
+    height: 392px;
+    border: 1px solid #ddd;
+    margin:0 auto;
+}
+
+.spec-scroll {
+    clear: both;
+    margin: 15px auto;
+    width: 390px;
+    height: 90px;
+    padding:0 30px;
+    position: relative;
+}
+
+.spec-scroll .next, .spec-scroll .prev {
+    background:#2e2e2e url(http://pro-btn.png/) center no-repeat;
+    display: block;
+    text-align: center;
+    width: 24px;
+    height: 75px;
+    cursor: pointer;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+.spec-scroll .next{
+    left: auto;
+    right: 0;
+    transform:rotate(180deg);
+}
+
+.spec-scroll .next:hover, .spec-scroll .prev:hover {
+    background-color:#1fc056;
+}
+
+.spec-scroll .items {
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 75px;
+    overflow: hidden
+}
+
+.spec-scroll .items ul {
+    position: absolute;
+    height: 75px;
+    overflow: hidden;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-start;
+}
+
+.spec-scroll .items ul li {
+    flex-basis: 85px;
+    width: 85px;
+    padding-right: 10px;
+}
+
+.spec-scroll .items ul li span {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    padding: 2px;
+}
+
+.spec-scroll .items ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer
+}
+
+.spec-scroll .items ul li span.active, .spec-scroll .items ul li span:hover {
+    border: 2px solid #1fc056;
+    padding: 1px
+}
+
+#tinybox {
+    position: absolute;
+    display: none;
+    padding: 10px;
+    background: #fff url(../preload.html) no-repeat 50% 50%;
+    border: 10px solid #ddd;
+    z-index: 99997
+}
+
+#tinymask {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    z-index: 99997
+}
+
+#tinycontent {
+    background: #fff
+}
+
+.spec-scroll .items ul li img {
+    margin: 0 auto
+}
+
+#imgee {
+    width: 100%;
+    height: 100%;
+    object-fit: contain
+}
+@media (max-width: 480px) {
+    .jq-zoom{
+        width: 292px;
+        margin: 0 auto;
+        float: none;
+    }
+    .jqzoom{
+        width: 290px;
+        height: 290px;
+    }
+}
